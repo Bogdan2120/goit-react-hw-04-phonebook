@@ -30,7 +30,7 @@ const PhoneBook = () => {
       return;
     }
     localStorage.setItem(CONTACTS, JSON.stringify(contacts));
-  }, [contacts]);
+  }, [contacts, updated]);
 
   const addContact = (name, number) => {
     if (isDublicate(name)) {
