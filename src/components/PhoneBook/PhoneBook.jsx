@@ -18,11 +18,10 @@ const PhoneBook = () => {
   useEffect(() => {
     const contactsLocal = localStorage.getItem(CONTACTS);
     const parsedContacts = JSON.parse(contactsLocal);
-
     if (parsedContacts) {
       setContscts([...parsedContacts]);
-      setUpdated(true);
     }
+    setUpdated(true);
   }, []);
 
   useEffect(() => {
