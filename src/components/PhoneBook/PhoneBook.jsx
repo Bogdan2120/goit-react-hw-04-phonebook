@@ -71,9 +71,7 @@ const PhoneBook = () => {
   };
 
   const removeContact = id => {
-    console.log('removeContact');
     setContscts(prevContact => {
-      console.log(prevContact);
       return prevContact.filter(contsct => contsct.id !== id);
     });
   };
